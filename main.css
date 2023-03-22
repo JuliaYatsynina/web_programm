@@ -26,3 +26,19 @@ a {
     color: green;
 }
 
+a:visited {
+    color: rgb(255, 0, 0);
+}
+
+a:hover {
+    color: rgb(38, 0, 255);
+    text-decoration: underline;
+    background-color:rgb(255, 255, 255);
+    font-weight: bold;
+}
+
+a:active {
+    color: fuchsia;
+    background-color: pink;
+}
+
