@@ -36,8 +36,8 @@ footer:hover {
 }
 
 footer:active {
-    font-size: 24pt;
-    color: white;
+    font-size: 26pt;
+    color: rgb(255, 255, 255);
 }
 
 a {
