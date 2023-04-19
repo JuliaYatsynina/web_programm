@@ -8,11 +8,18 @@
     <link rel="stylesheet" href="main.css">
     <script>
         function sum() {
-            let a = 51784;
-            let b = 7891;
+            let inputA = document.getElementById('nA')
+            let inputB = document.getElementById('nB')
+
+            let a = parseInt(inputA.value);
+            let b = parseInt(inputB.value);
             let result = a + b;
             alert('Сумма '+a+' и '+b+' равна '+result);
     }
+        function author() {
+            let author = 'Добро пожаловать!\nАвтор данной страницы:\nЯцынина Юлия Сергеевна';
+            alert(author);
+        }
     </script>
     <style>
         .message {
@@ -30,15 +37,17 @@
     </style>
 </head>
 <body>
-    <header>
+    <header onclick="author()">
         НГТУ, ФБ, Лабораторная работа 5
     </header>
     <main>
-        <div class="message" onclick="sum()">Сколько будет 5154+7891?</div>
-        <div class="message">Узнать, кто автор страницы</div>
+        <label>Первое число: <input type="number" value="5154" id="nA"></label><br>
+        <label>Второе число: <input type="number" value="7891" id="nB"></label><br>
+        <div class="message" onclick="sum()">Найти сумму чисел</div>
+        <div class="message" onclick="author()">Узнать, кто автор страницы</div>
     </main>
 
-    <footer>
+    <footer onclick="author()">
         &copy; Юлия Яцынина, ФБИ-14, 2 курс, 2023
     </footer>
 
