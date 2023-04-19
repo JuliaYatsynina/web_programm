@@ -54,10 +54,29 @@
             output.style.color=textColor;
             output.style.border=borderF;
         }
+        function kor() {
+            let inputJ = document.getElementById('nJ')
+            let inputU = document.getElementById('nU')
+            let inputL = document.getElementById('nL')
+            let inputI = document.getElementById('nI')
+            let inputY = document.getElementById('nY')
+
+            let j = parseInt(inputJ.value);
+            let u = parseInt(inputU.value);
+            let l = parseInt(inputL.value);
+            let i = parseInt(inputI.value);
+            let y = parseInt(inputY.value);
+
+            let res = (j*300)+(u*250)+(l*500)+(i*400)+(y*150);
+            alert('Рассчитать '+ res);
+            let output1 = document.getElementById('output1')
+            output1.innerHTML = 'ИТОГО к оплате: '+ res;
+        }
+        
     </script>
     <style>
         .message {
-            width: 250px;
+            width: 230px;
             height: 40px;
             background: rgb(224, 226, 253);
             border: 2mm ridge;
@@ -66,12 +85,24 @@
             cursor: pointer;
             text-align: center;
         }
+    
         #output{
             border: 1px solid;
             width: 300px;
             height: 40px;
         }
+        #output1{
+            font-size: 17pt;
+            color:deeppink;
+        }
 
+        .kor{
+            border: 1px solid;
+            border-radius: 20px;
+            width: 360px;
+            height: 260px;
+            padding: 10px;
+        }
     </style>
 </head>
 <body>
@@ -79,8 +110,8 @@
         НГТУ, ФБ, Лабораторная работа 5
     </header>
     <main>
-        <label>Первое число: <input type="number" value="5154" id="nA"></label><br>
-        <label>Второе число: <input type="number" value="7891" id="nB"></label><br>
+        <label>Первое число: <input type="number" value="0" id="nA"></label><br>
+        <label>Второе число: <input type="number" value="0" id="nB"></label><br>
         <div class="message" onclick="sum()">Найти сумму чисел</div>
         <div class="message" onclick="min()">Найти разность чисел</div>
         <div class="message" onclick="umn()">Найти произведение чисел</div>
@@ -94,9 +125,18 @@
         </div>
 
         <div id="output"></div>
-
-
-
+        <p></p>
+        <p></p>
+        <div class="kor">
+        <div><h1><b>Корзина товаров:</b></h1></div>
+        <label>Роза(300р/шт): <input type="number" value="0" id="nJ"></label><br>
+        <label>Пион(250р/шт): <input type="number" value="0" id="nU"></label><br>
+        <label>Гартензия(500р/шт): <input type="number" value="0" id="nL"></label><br>
+        <label>Лилия(400р/шт): <input type="number" value="0" id="nI"></label><br>
+        <label>Ромашка(150р/шт): <input type="number" value="0" id="nY"></label><br>
+        <input type="button" value="Рассчитать" onclick="kor()" style="cursor: pointer">
+        <div id="output1"></div>
+        </div>
 
     </main>
 
