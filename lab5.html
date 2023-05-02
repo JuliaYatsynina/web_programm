@@ -54,6 +54,9 @@
             output.style.color=textColor;
             output.style.border=borderF;
         }
+        function smena() {
+            let sm = document.getElementById('sm')
+        }
         function kor() {
             let inputJ = document.getElementById('nJ')
             let inputU = document.getElementById('nU')
@@ -68,9 +71,11 @@
             let y = parseInt(inputY.value);
 
             let res = (j*300)+(u*250)+(l*500)+(i*400)+(y*150);
-            alert('Рассчитать '+ res);
-            let output1 = document.getElementById('output1')
-            output1.innerHTML = 'ИТОГО к оплате: '+ res;
+            let output1 = document.getElementById('output1');
+            output1.innerHTML = 'ИТОГО к оплате: '+ res+' рублей';
+        }
+        function krug(n) {
+            n.style.opacity = '0';
         }
         
     </script>
@@ -100,9 +105,22 @@
             border: 1px solid;
             border-radius: 20px;
             width: 360px;
-            height: 260px;
+            height: 335px;
             padding: 10px;
         }
+
+        .krug {
+            cursor: pointer;
+            width: 50px;
+            height: 50px;
+            border: 2px dashed white;
+            border-radius: 50px;
+            text-align: center;
+            line-height: 50px;
+            font-size: 25px;
+            display: inline-block;
+        }
+                
     </style>
 </head>
 <body>
@@ -125,18 +143,34 @@
         </div>
 
         <div id="output"></div>
+        
         <p></p>
         <p></p>
         <div class="kor">
         <div><h1><b>Корзина товаров:</b></h1></div>
-        <label>Роза(300р/шт): <input type="number" value="0" id="nJ"></label><br>
-        <label>Пион(250р/шт): <input type="number" value="0" id="nU"></label><br>
-        <label>Гартензия(500р/шт): <input type="number" value="0" id="nL"></label><br>
-        <label>Лилия(400р/шт): <input type="number" value="0" id="nI"></label><br>
-        <label>Ромашка(150р/шт): <input type="number" value="0" id="nY"></label><br>
+        <div>Роза(300р/шт):</div><label><input type="number" value="0" id="nJ"></label><br>
+        <div>Пион(250р/шт):</div><label><input type="number" value="0" id="nU"></label><br>
+        <div>Гартензия(500р/шт):</div><label><input type="number" value="0" id="nL"></label><br>
+        <div>Лилия(400р/шт):</div><label><input type="number" value="0" id="nI"></label><br>
+        <div>Ромашка(150р/шт):</div><label><input type="number" value="0" id="nY"></label><br>
         <input type="button" value="Рассчитать" onclick="kor()" style="cursor: pointer">
         <div id="output1"></div>
         </div>
+
+        <p></p>
+        <p></p>
+                 
+        <div align="center" class="krug" onclick="krug(this)" style="background: #ff4343;">1</div>
+        <div align="center" class="krug" onclick="krug(this)" style="background: #ff8724;">2</div>
+        <div align="center" class="krug" onclick="krug(this)" style="background: #ffea2b;">3</div>
+        <div align="center" class="krug" onclick="krug(this)" style="background: #66960d;">4</div>
+        <div align="center" class="krug" onclick="krug(this)" style="background: #44a5ff;">5</div>
+        <div align="center" class="krug" onclick="krug(this)" style="background: #25dc25;">6</div>
+        <div align="center" class="krug" onclick="krug(this)" style="background: #15b376;">7</div>
+        <div align="center" class="krug" onclick="krug(this)" style="background: #31ddf4;">8</div>
+        <div align="center" class="krug" onclick="krug(this)" style="background: #406de8;">9</div>
+        <div align="center" class="krug" onclick="krug(this)" style="background: #d753f8;">10</div>
+                   
 
     </main>
 
