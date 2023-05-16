@@ -17,6 +17,16 @@
             text-align: center;
             color: rgb(8, 124, 86);
         }
+        .pr{
+            border-radius: 30px;
+            border: dashed blue;
+            padding: 2%;
+            margin-left: 33%;
+            margin-right: 33%;
+            margin-bottom: 3%;
+            text-align: center;
+            color: rgb(17, 86, 63);
+        }
     </style>
     <script>
         let number;
@@ -62,6 +72,19 @@
             screens[2].style.display='none';
             screens[1].style.display='block';        
         }
+
+        function p(){
+            let screens=document.getElementsByClassName('pr');
+            screens[0].style.display='none';
+            screens[1].style.display='block';
+        }
+        function sp(){
+            let screens=document.getElementsByClassName('pr');
+            screens[0].style.display='block';
+            screens[1].style.display='none';
+        }
+
+
     </script>
 </head>
 <body>
@@ -94,6 +117,21 @@
             <div>
                 <button onclick="pov()">Сыграть ещё раз</button>
             </div>
+        </div>
+        <div class="pr">
+            <button onclick="p()">Показать правила</button>
+        </div>
+        <div class="pr" style="display:none;">
+            <button onclick="sp()">Скрыть правила</button>
+            <ol>
+                <li>Нажать кнопку "Сыграть в игру"</li>
+                <li>Ввести число</li>
+                <li>При неверном ответе, просмотреть пояившееся сообщение</li>
+                <li>Ввести другое, новое число</li>
+                <li>Убедится в правильности ответа</li>
+                <li>Радоваться выигрышу!</li>
+                <li>При желании повторить игру</li>
+            </ol>
         </div>
 
 
