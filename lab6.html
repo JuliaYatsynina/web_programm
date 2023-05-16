@@ -27,6 +27,19 @@
             text-align: center;
             color: rgb(17, 86, 63);
         }
+        .bl{
+            border-radius: 30px;
+            border: solid blue;
+            background-color:aqua;
+            padding: 2%;
+            margin-left: 33%;
+            margin-right: 33%;
+            margin-bottom: 3%;
+            text-align: center;
+            color: rgb(92, 4, 98);
+            position: relative;
+        }
+
     </style>
     <script>
         let number;
@@ -84,6 +97,33 @@
             screens[1].style.display='none';
         }
 
+        function color(div){
+            if(div.style.backgroundColor=='aqua'){
+              div.style.backgroundColor='white';  
+              div.style.color='purple';
+              document.getElementById('col').innerHTML='белый';
+            }
+            else if(div.style.backgroundColor=='white'){
+              div.style.backgroundColor='blue';  
+              div.style.color='white';
+              document.getElementById('col').innerHTML='синий';
+            }
+            else if(div.style.backgroundColor=='blue'){
+              div.style.backgroundColor='red';  
+              div.style.color='black';
+              document.getElementById('col').innerHTML='красный';
+            }
+            else if(div.style.backgroundColor=='red'){
+              div.style.backgroundColor='green';  
+              div.style.color='white';
+              document.getElementById('col').innerHTML='зеленый';
+            }
+            else{
+              div.style.backgroundColor='aqua';  
+              div.style.color='purple';
+              document.getElementById('col').innerHTML='небесный';
+            }
+        }
 
     </script>
 </head>
@@ -133,7 +173,10 @@
                 <li>При желании повторить игру</li>
             </ol>
         </div>
-
+        <div class="bl" ondblclick="color(this)">
+            Цвет:<span id="col">небесный</span> <br>
+            Сделайте двойной щелчок, чтобы сменить.
+        </div>
 
     
     </main>
