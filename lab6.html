@@ -1,18 +1,103 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Яцынина Юлия Сергеевна. Лабораторная 6</title>
     <link rel="stylesheet" href="main.css">
+    <style>
+        .game{
+            border-radius: 30px;
+            border: dashed blue;
+            padding: 2%;
+            margin-left: 33%;
+            margin-right: 33%;
+            margin-bottom: 3%;
+            text-align: center;
+            color: rgb(8, 124, 86);
+        }
+    </style>
+    <script>
+        let number;
+        let count=0;
+        function start() {
+            number=Math.floor(Math.random()*100)+1;
+            let screens = document.getElementsByClassName('game');
+            screens[0].style.display='none';
+            screens[1].style.display='block';
+        }
+        function g(){
+            count++;
+            let input =document.getElementById('un');
+            let UN =parseInt(input.value);
+            let mes=document.getElementById('res');
+            let m=document.getElementById('UN');
+            if(UN>number){
+                mes.innerHTML='Вы ввели слишком большое число';
+            }
+            else if(UN<number){
+                mes.innerHTML= 'Вы ввели слишком маленькое число';
+            }
+            else{
+                let screens=document.getElementsByClassName('game');
+                screens[1].style.display='none';
+                screens[2].style.display='block';
+                document.getElementById('un').value="0";      
+                document.getElementById('try-count').innerHTML=count;  
+                document.getElementById('number').innerHTML=number;         
+            }
+            if(UN<1){
+                mes.innerHTML='Число должно быть в диапазоне от 1 до 100';
+            }
+            else if(UN>100){
+                mes.innerHTML='Число должно быть в диапазоне от 1 до 100';
+            }
+
+        }
+        function pov(){
+            count=0;
+            number=Math.floor(Math.random()*100)+1;
+            let screens=document.getElementsByClassName('game');
+            screens[2].style.display='none';
+            screens[1].style.display='block';        
+        }
+    </script>
 </head>
 <body>
     <header>
         НГТУ, ФБ, Лабораторная работа 6
     </header>
     <main>
+        <div class="game">
+            <button onclick="start()">
+                Сыграть в игру
+            </button>
+        </div>
+        <div class="game" style="display: none;">
+            <h1>Угадай число!</h1>
+            <div>
+                Задумано число от 1 до 100. Угадайте, какое?<br>
+                <input type="number" value="" min="1" max="100" id="un"><br>
+                <button onclick="g()">Угадать</button>
+                <div id="res"></div>
+            </div>
+        </div>
+        <div class="game" style="display: none;">
+            <h1>Поздравляем, вы выиграли!</h1>
+            <div>
+                Задуманное число: <span id="number"></span>
+            </div>
+            <div>
+                Количество попыток: <span id="try-count"></span>
+            </div>
+            <div>
+                <button onclick="pov()">Сыграть ещё раз</button>
+            </div>
+        </div>
 
+
+    
     </main>
     <footer>
         &copy; Юлия Яцынина, ФБИ-14, 2 курс, 2023
