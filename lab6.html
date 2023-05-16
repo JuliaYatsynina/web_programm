@@ -70,12 +70,16 @@
             width: 100px;
             height: 50px;
             background-color: rgb(172, 240, 158);
-            color: black;
             border: solid rgb(133, 133, 252);
             border-radius: 30px;
             position: relative;
             cursor: pointer;
             top: 130px;
+        }
+        .fil{
+            margin-top: 200px;
+            text-align: center;
+            margin-bottom: 50px;
         }
 
     </style>
@@ -189,6 +193,58 @@
             }
         }
 
+        function fil(){
+            let color=document.getElementById('color').value;
+            let type=document.getElementById('type').value;
+            let w=document.getElementById('w');
+
+            if(color=='Красный' && type=='Футболка'){
+                w.src='red-f.jpg';
+                w.style.width='30%';
+                w.style.height='30%';
+            }
+            else if(color=='Красный' && type=='Поло'){
+                w.src='red-p.jpg';
+                w.style.width='30%';
+                w.style.height='30%';
+            }
+            else if(color=='Красный' && type=='Майка'){
+                w.src='red-m.jpg';
+                w.style.width='30%';
+                w.style.height='30%';
+            }
+            else if(color=='Белый' && type=='Футболка'){
+                w.src='white-f.jpg';
+                w.style.width='30%';
+                w.style.height='30%';
+            }
+            else if(color=='Белый' && type=='Поло'){
+                w.src='white-p.jpg';
+                w.style.width='30%';
+                w.style.height='30%';
+            }
+            else if(color=='Белый' && type=='Майка'){
+                w.src='white-m.jpg';
+                w.style.width='30%';
+                w.style.height='30%';
+            }
+            else if(color=='Черный' && type=='Футболка'){
+                w.src='black-f.jpg';
+                w.style.width='30%';
+                w.style.height='30%';
+            }
+            else if(color=='Черный' && type=='Поло'){
+                w.src='black-p.jpeg';
+                w.style.width='30%';
+                w.style.height='30%';
+            }
+            else if(color=='Черный' && type=='Майка'){
+                w.src='black-m.jpg';
+                w.style.width='30%';
+                w.style.height='30%';
+            }
+        }
+
     </script>
 </head>
 <body>
@@ -245,6 +301,24 @@
             Щелкни меня
         </div> 
         <div class="r" onclick="blok(this)"></div>
+
+        <div class="fil">
+            Цвет одежды:
+            <select id="color">
+                <option>Красный</option>
+                <option>Белый</option>
+                <option>Черный</option>
+            </select><br>
+
+            Тип одежды:
+            <select id="type">
+                <option>Футболка</option>
+                <option>Поло</option>
+                <option>Майка</option>
+            </select><br>
+            <button onclick="fil(this)">OK</button><br>
+            <img id="w">
+        </div>
 
     
     </main>
