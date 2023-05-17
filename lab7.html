@@ -7,19 +7,35 @@
     <title>Яцынина Юлия Сергеевна. Лабораторная 6</title>
     <link rel="stylesheet" href="main.css">
     <style>
-
+        .footer{
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+        }
     </style>
+    <script>
+        function add(){
+            let bls=document.getElementById('bls');
+            for(let i=0; i<10; i++){
+                let bl = document.createElement('div');
+                bl.innerHTML='Блок №'+(i+1)+':'+(2*i**2);
+                bls.appendChild(bl);
+            }
+        }
+    </script>
 </head>
 <body>
     <header>
         НГТУ, ФБ, Лабораторная работа 7
     </header>
     <main>
-
+        <button onclick="add()">Создать блоки</button>
+        <div id="bls"></div>
 
 
     </main>
-    <footer>
+    <footer class="footer">
         &copy; Юлия Яцынина, ФБИ-14, 2 курс, 2023
     </footer>
 </body>
