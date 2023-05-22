@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Яцынина Юлия Сергеевна. Лабораторная 4</title>
+    <link rel="stylesheet" href="main.css">
+    <style>
+        main div{
+            margin: 20px;
+            border: 1px solid;
+            border-radius: 7px;
+            padding: 7px;
+            width: 500px;
+            height: 100px;
+            overflow-y: auto;
+            overflow-x: hidden;
+            position:relative;
+            background: linear-gradient(rgb(178, 247, 211), rgb(123, 255, 154));
+        }
+        .second{
+            z-index: 1;
+            left: 400px;
+            top: 150px;
+            position: absolute;
+        }
+        .second:hover{
+            z-index: 3;
+        }
+        .one{
+            z-index: 2;
+        }
+        aside{
+            position: absolute;
+            left: 0;
+            width: 300px;
+            background: whitesmoke;
+            height: 100%;
+            overflow: auto;
+        }
+        aside div{
+            color: rgb(0, 0, 0);
+            padding: 10px;
+            text-align: justify;
+            text-indent: 20px;
+            position: static;
+        }
+        main{
+            margin-left: 320px;
+        }
+        footer{
+            position: fixed;
+            right: 0;
+            bottom: 0;
+            width: 100%;
+        }
+        .cat{
+            margin: 20px;
+            border: 1px solid;
+            border-radius: 50px;
+            padding: 7px;
+            width: 5px;
+            height: 5px;
+            position:relative;
+            background: whitesmoke;
+            bottom: 180px;
+            left: 80px;
+            box-shadow: 1px 5px 7px rgb(255, 140, 0);
+        }
+
+        .cat1{
+            margin: 20px;
+            border: 1px solid;
+            border-radius: 50px;
+            padding: 7px;
+            width: 10px;
+            height: 10px;
+            position:relative;
+            background: whitesmoke;
+            bottom: 230px;
+            left: 60px;
+            box-shadow: 1px 5px 7px rgb(255, 140, 0);
+        }
+        .cat2{
+            margin: 20px;
+            border: 1px solid;
+            border-radius: 50px;
+            padding: 7px;
+            width: 20px;
+            height: 20px;
+            position:relative;
+            background: whitesmoke;
+            bottom: 300px;
+            left: 50px;
+            box-shadow: 1px 5px 7px rgb(255, 140, 0);
+        }
+        .cat3{
+            margin: 20px;
+            border: 1px solid;
+            border-radius: 50px;
+            padding: 5px;
+            width: 100px;
+            height: 40px;
+            position:relative;
+            background: whitesmoke;
+            bottom: 400px;
+            left: 30px;
+            text-align: center;
+            box-shadow: 1px 5px 7px rgb(255, 140, 0);
+        }
+        .cute{
+            margin: 20px;
+            border: 1px solid;
+            border-radius: 50px;
+            padding: 7px;
+            width: 5px;
+            height: 5px;
+            position:relative;
+            background: whitesmoke;
+            bottom: 380px;
+            left: 440px;
+            box-shadow: 1px 5px 7px rgb(47, 248, 201);
+        }
+        .cute1{
+            margin: 20px;
+            border: 1px solid;
+            border-radius: 50px;
+            padding: 7px;
+            width: 10px;
+            height: 10px;
+            position:relative;
+            background: whitesmoke;
+            bottom: 430px;
+            left: 420px;
+            box-shadow: 1px 5px 7px rgb(47, 248, 201);
+        }
+        .cute2{
+            margin: 20px;
+            border: 1px solid;
+            border-radius: 50px;
+            padding: 7px;
+            width: 20px;
+            height: 20px;
+            position:relative;
+            background: whitesmoke;
+            bottom: 500px;
+            left: 410px;
+            box-shadow: 1px 5px 7px rgb(47, 248, 201);
+        }
+        .cute3{
+            margin: 20px;
+            border: 1px solid;
+            border-radius: 50px;
+            padding: 5px;
+            width: 100px;
+            height: 40px;
+            position:relative;
+            background: whitesmoke;
+            bottom: 600px;
+            left: 400px;
+            text-align: center;
+            box-shadow: 1px 5px 7px rgb(47, 248, 201);
+        }
+        
+    </style>
+</head>
+
+<body>
+    <header>
+        НГТУ, ФБ, Лабораторная работа 4
+    </header>
+
+    <aside>
+        <div>Об этой книге</div>
+
+        <div>
+            Люди без экономического образования зачастую не понимают базовых вещей, потому что в их
+            представлении финансы – это что-то из области бухгалтерии. Пыльные папки с подписями 
+            «счета-фактуры», мрачные тётки с гнездом аиста на голове, у них ещё вечно ломается виндоуз,
+            а «принтер печатает крякозябры, Юра-компьютерщик, помоги, у нас ничего не работает, я 
+            говорю, ничего не работает, ты что, идиот?», чудовищная программа «1С-Бухгалтерия», от 
+            одного вида которой нормальному человеку делается плохо, проверки налоговой инспекции с 
+            выносом коробок из-под ксерокса, «брат жены работает в «Газпроме» и говорит, что скоро 
+            дефолт, что делать?». Я объясню жертвам этой парадигмы, что финансы к этим явлениям не имеют
+            никакого отношения. Финансовые рынки – это в первую очередь интересно.
+        </div>
+
+        <div>
+            Как работает мировая закулиса? Когда будет дефолт (и почему его не будет)?
+            Зачем человеку облигации? Как устроена компания Уоррена Баффета и почему именно так?
+            Это всё интересные вопросы, но суровые тётки с синими волосами наложили на них печать 
+            таинственности и присыпали полезные знания нафталином. Я хочу рассказать, как всё обстоит 
+            на самом деле. У меня есть чит-коды.
+        </div>
+
+    </aside>
+    
+    <main>
+
+        <div class="one">
+            Инженеры представляют мир как конструкцию, и я, гуманитарий, примерно так же.
+            В этом и заключается секрет осознания экономики как науки.
+            Всё становится гораздо яснее, если представить, что финансы в глобальном смысле – это в первую очередь технология.
+            Так думать удобно и просто. Ведь технология – всего лишь метод действия или способ производства чего-либо.
+        </div>
+        
+        <div class="second">
+            Конечно, тут много деталей, но для базового понимания финансовый инструмент удобно представлять как инженерный инструмент или объект.
+            Это не сложнее, чем представить, зачем нужен циркуль, ящик или, например, железнодорожный мост.
+        </div>
+        
+        <div class="one">
+            Существуют теории – математические, – которые помогают создавать финансовые структуры, и они достаточно сложны – как, например, сложны паровой двигатель или электростанция.
+            У них много компонентов, которые должны чётко работать без сбоев, а если сбой и случается, в работающей на практике схеме будет много уровней защиты.
+            Поэтому, прежде чем открывать счёт у форекс-брокера, подумайте, доверили бы вы дворнику поиграть с отбойным молотком у себя в квартире, если вам нужно всего лишь повесить на стену фотку любимой жены или другой женщины.
+        </div>
+        
+        <div class="one">
+            Через некоторое время технология отрабатывается и начинает верно служить цивилизации.
+            Никого не удивляет, что паровые двигатели поначалу взрывались, а электростанции портили (и продолжают портить) окружающую среду.
+            Цивилизация шла дальше, а инженеры извлекали уроки и строили новые двигатели и электростанции – более эффективные и более безопасные.
+        </div>
+
+        <img src="cats.jpg" width="430px"><img src="cat2.jpg" width="493px">
+        <div class="cat"></div>
+        <div class="cat1"></div>
+        <div class="cat2"></div>
+        <div class="cat3">Я покушал!</div>
+
+        <div class="cute"></div>
+        <div class="cute1"></div>
+        <div class="cute2"></div>
+        <div class="cute3">А меня не покормил!</div>
+
+    </main>
+
+    <footer>
+        &copy; Юлия Яцынина, ФБИ-14, 2 курс, 2023
+    </footer>
+</body>
+</html>
