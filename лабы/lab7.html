@@ -42,11 +42,11 @@
         }
         function trans(){
             let trans=document.getElementById('trans');
-            for(let i=0; i<10; i++){
+            for(let i=0; i<=10; i++){
                 let b = document.createElement('div');
                 b.innerHTML='Блок №'+(i+1);
+                b.style.opacity=i/10;
                 trans.appendChild(b);
-                trans.style.opacity='50%';
             }
         }
     </script>
