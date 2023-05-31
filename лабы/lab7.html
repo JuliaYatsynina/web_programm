@@ -49,6 +49,24 @@
                 trans.appendChild(b);
             }
         }
+        function create() {
+            let numCurcles = document.getElementById('numCurcles').value;
+            let circles = document.getElementById('circles');
+            for (let i = numCurcles; i > 0; i--){
+                let circle = document.createElement('div');
+                circle.style.width = '50px';
+                circle.style.height = '50px';
+                circle.style.borderRadius = '100px';
+                circle.style.textAlign = 'center';
+                if (i % 2 == 0){
+                    circle.style.backgroundColor = 'rgb(65, 246, 207)'
+                }
+                else {circle.style.backgroundColor = 'rgb(150, 240, 158)'
+                }
+                circle.innerHTML = i;
+                circles.appendChild(circle);
+            }
+        }
     </script>
 </head>
 <body>
@@ -64,6 +82,11 @@
 
         <button onclick="trans()">Создать полупрозрачные блоки</button>
         <div id="trans"></div>
+
+        <label>Введите количество кругов:</label>
+        <input type="number" value="5" placeholder="Введите число кругов" id="numCurcles">
+        <button onclick="create()">зеленый/голубой</button>
+        <div id="circles"></div>
 
     </main>
     <footer class="footer">
