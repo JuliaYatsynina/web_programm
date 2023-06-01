@@ -9,9 +9,10 @@
     <style>
         .footer{
             position: fixed;
-            left: 0;
+            right: 0;
             bottom: 0;
             width: 100%;
+            margin-bottom: 0px;
         }
     </style>
     <script>
@@ -67,6 +68,18 @@
                 circles.appendChild(circle);
             }
         }
+
+        function table() {
+            let umn = document.getElementById('umn');
+            for (let i = 13; i <=33; i=i+1){
+                let table = document.createElement('div');
+                table.innerHTML = i + '*' + 74 + '='+ (i*74);
+                table.style.color = 'olive'
+                umn.appendChild(table);
+            }
+        }
+
+        
     </script>
 </head>
 <body>
@@ -87,6 +100,11 @@
         <input type="number" value="5" placeholder="Введите число кругов" id="numCurcles">
         <button onclick="create()">зеленый/голубой</button>
         <div id="circles"></div>
+
+        <button onclick="table()">Таблица умножения на 74</button>
+        <div id="umn"></div>
+
+        
 
     </main>
     <footer class="footer">
