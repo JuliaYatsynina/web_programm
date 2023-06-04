@@ -42,12 +42,16 @@
             document.getElementById('d').innerHTML='Среднее значение: '+kurs;
         }
         function trans(){
-            let trans=document.getElementById('trans');
-            for(let i=0; i<=10; i++){
+            let c=document.getElementById('trans');
+            for(let i=0; i<10; i++){
                 let b = document.createElement('div');
+                b.style.width = '70px';
+                b.style.height = '70px';
+                b.style.backgroundColor = 'blue';
+                b.style.color='white';
                 b.innerHTML='Блок №'+(i+1);
                 b.style.opacity=i/10;
-                trans.appendChild(b);
+                c.appendChild(b);
             }
         }
         function create() {
